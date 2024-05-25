@@ -60,15 +60,14 @@ public partial class MainScreen : Form
 
         SeedsList.Clear();
         dataGridViewSemBinding.Rows.Add(
-            seed.Id, 
-            seed.Name, 
-            seed.Description, 
-            seed.Category, 
-            seed.Quantity, 
-            seed.UnitPrice, 
+            seed.Id,
+            seed.Name,
+            seed.Description,
+            seed.Category,
+            seed.Quantity,
+            seed.UnitPrice,
             seed.TotalPrice);
     }
-
 
     private void DataGridViewSemBinding_CellValueChanged(object? sender, DataGridViewCellEventArgs e)
     {
@@ -80,9 +79,14 @@ public partial class MainScreen : Form
         if (e.ColumnIndex != idColumnIndex) return;
 
         var idCellValue = dataGridViewSemBinding.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+        if (idCellValue == null)
+        {
+            dataGridViewSemBinding.Rows.RemoveAt(e.RowIndex);
+            return;
+        }
 
         bool success = long.TryParse(idCellValue.ToString(), out long longCellValue);
-        
+
         if (!success || longCellValue < 0)
         {
             MessageBox.Show("Valor inserido é inválido!");
@@ -107,5 +111,4 @@ public partial class MainScreen : Form
         dataGridViewSemBinding.Rows[e.RowIndex].Cells[nameof(Seed.UnitPrice)].Value = seed.UnitPrice;
         dataGridViewSemBinding.Rows[e.RowIndex].Cells[nameof(Seed.TotalPrice)].Value = seed.TotalPrice;
     }
-
 }

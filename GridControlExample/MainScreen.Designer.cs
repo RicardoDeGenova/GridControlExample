@@ -59,19 +59,23 @@ partial class MainScreen
         dataGridViewComBinding.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
         dataGridViewComBinding.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dataGridViewComBinding.EditMode = DataGridViewEditMode.EditProgrammatically;
-        dataGridViewComBinding.Location = new Point(12, 66);
+        dataGridViewComBinding.Location = new Point(14, 88);
+        dataGridViewComBinding.Margin = new Padding(3, 4, 3, 4);
         dataGridViewComBinding.Name = "dataGridViewComBinding";
-        dataGridViewComBinding.Size = new Size(1035, 280);
+        dataGridViewComBinding.RowHeadersWidth = 51;
+        dataGridViewComBinding.Size = new Size(1183, 373);
         dataGridViewComBinding.TabIndex = 0;
         // 
         // menuStrip
         // 
         menuStrip.Enabled = false;
         menuStrip.Font = new Font("Segoe UI", 12F);
+        menuStrip.ImageScalingSize = new Size(20, 20);
         menuStrip.Items.AddRange(new ToolStripItem[] { ExportMenuItem });
         menuStrip.Location = new Point(0, 0);
         menuStrip.Name = "menuStrip";
-        menuStrip.Size = new Size(1055, 29);
+        menuStrip.Padding = new Padding(7, 3, 0, 3);
+        menuStrip.Size = new Size(1206, 38);
         menuStrip.TabIndex = 1;
         menuStrip.Text = "menuStrip1";
         // 
@@ -79,21 +83,22 @@ partial class MainScreen
         // 
         ExportMenuItem.DropDownItems.AddRange(new ToolStripItem[] { PdfExportMenuItem });
         ExportMenuItem.Name = "ExportMenuItem";
-        ExportMenuItem.Size = new Size(80, 25);
+        ExportMenuItem.Size = new Size(100, 32);
         ExportMenuItem.Text = "Exportar";
         // 
         // PdfExportMenuItem
         // 
         PdfExportMenuItem.Name = "PdfExportMenuItem";
-        PdfExportMenuItem.Size = new Size(108, 26);
+        PdfExportMenuItem.Size = new Size(133, 32);
         PdfExportMenuItem.Text = "PDF";
         // 
         // buttonPopulateGrids
         // 
         buttonPopulateGrids.Anchor = AnchorStyles.Top;
-        buttonPopulateGrids.Location = new Point(466, 32);
+        buttonPopulateGrids.Location = new Point(533, 43);
+        buttonPopulateGrids.Margin = new Padding(3, 4, 3, 4);
         buttonPopulateGrids.Name = "buttonPopulateGrids";
-        buttonPopulateGrids.Size = new Size(122, 29);
+        buttonPopulateGrids.Size = new Size(139, 39);
         buttonPopulateGrids.TabIndex = 2;
         buttonPopulateGrids.Text = "Popula Grids";
         buttonPopulateGrids.UseVisualStyleBackColor = true;
@@ -112,21 +117,24 @@ partial class MainScreen
         dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
         dataGridViewSemBinding.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
         dataGridViewSemBinding.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridViewSemBinding.Location = new Point(12, 352);
+        dataGridViewSemBinding.Location = new Point(14, 469);
+        dataGridViewSemBinding.Margin = new Padding(3, 4, 3, 4);
         dataGridViewSemBinding.Name = "dataGridViewSemBinding";
-        dataGridViewSemBinding.Size = new Size(1035, 280);
+        dataGridViewSemBinding.RowHeadersWidth = 51;
+        dataGridViewSemBinding.Size = new Size(1183, 373);
         dataGridViewSemBinding.TabIndex = 0;
         // 
         // MainScreen
         // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1055, 644);
+        ClientSize = new Size(1206, 859);
         Controls.Add(buttonPopulateGrids);
         Controls.Add(dataGridViewSemBinding);
         Controls.Add(dataGridViewComBinding);
         Controls.Add(menuStrip);
         MainMenuStrip = menuStrip;
+        Margin = new Padding(3, 4, 3, 4);
         Name = "MainScreen";
         StartPosition = FormStartPosition.CenterScreen;
         Text = "Form1";
